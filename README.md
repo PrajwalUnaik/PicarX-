@@ -23,7 +23,7 @@ curl -sSL https://raw.githubusercontent.com/PrajwalUnaik/PicarX-/main/picarx_set
 | [robot-hat](https://github.com/sunfounder/robot-hat) | 2.5.x | Hardware abstraction layer for SunFounder robots |
 | [vilib](https://github.com/sunfounder/vilib) | latest | Vision library for the Pi camera |
 | [picar-x](https://github.com/sunfounder/picar-x) | 2.1.x | Main PiCar-X control library |
-| I2S Amplifier | — | Audio output support via `i2samp.sh` |
+
 
 ---
 
@@ -32,8 +32,7 @@ curl -sSL https://raw.githubusercontent.com/PrajwalUnaik/PicarX-/main/picarx_set
 1. **Updates** the system (`apt update && apt upgrade`)
 2. **Installs** required base Python packages
 3. **Clones & installs** `robot-hat`, `vilib`, and `picar-x` from GitHub
-4. **Enables sound** by running the I2S amplifier setup script
-5. **Reboots** the Pi automatically after everything is done
+4. **Reboots** the Pi automatically after everything is done
 
 ---
 
@@ -48,19 +47,6 @@ curl -sSL https://raw.githubusercontent.com/PrajwalUnaik/PicarX-/main/picarx_set
 ## 🔁 Safe to Re-run
 
 The script removes and re-clones all module folders before installing, so it's completely safe to run again after re-flashing your SD card.
-
----
-
-## 🔊 No Sound After Reboot?
-
-If there's no audio output after the reboot, SSH into your Pi and re-run the I2S amplifier script manually:
-
-```bash
-cd ~/robot-hat
-sudo bash i2samp.sh
-```
-
-Run it a couple of times if needed — this is a known quirk with the I2S amplifier setup.
 
 ---
 
